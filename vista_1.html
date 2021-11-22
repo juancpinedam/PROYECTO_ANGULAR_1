@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="PrimeraApp" >
+<head>
+<meta charset="utf-8">
+<title>HI</title>
+<script  src="js/angular.min.js"></script>
+<script  src="js/controller.js"></script>
+</head>
+<body  ng-controller="PrimerController" >
+
+
+    <input type="text" ng-Model="nuevoComentario.comentario" >
+    <br>
+    <input type="text" ng-Model="nuevoComentario.username" >
+
+<button ng-click="agregarComentario()" >AGREGAR</button>
+
+<h3>comentarios</h3>
+<ul>
+
+<li ng-repeat="lista in comentarios">
+    {{ lista.comentario}} - {{lista.username }}
+
+</li>
+
+</ul>
+
+
+</body>
+
+
+</html>
